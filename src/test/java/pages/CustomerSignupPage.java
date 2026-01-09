@@ -18,7 +18,7 @@ public class CustomerSignupPage extends LoginSignupCustomerComponent{
         super(driver);
     }
 
-    protected void enterFirstName(String fName){
+    public void enterFirstName(String fName){
         type(firstName,fName);
     }
     protected void enterLastName(String lName){
