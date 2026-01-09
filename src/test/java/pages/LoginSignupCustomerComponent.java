@@ -4,10 +4,12 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginSignupCustomerComponent extends BasePage {
 
-    public CustomerLoginPage cLoginPage;
+    public CustomerLoginPage customerLoginPage;
+    public CustomerSignupPage customerSignupPage;
     public LoginSignupCustomerComponent(WebDriver driver)
     {
         super(driver);
-        cLoginPage=new CustomerLoginPage(driver);
+        customerLoginPage=new CustomerLoginPage(driver);
+        customerSignupPage=new CustomerSignupPage(driver);
     }
 }

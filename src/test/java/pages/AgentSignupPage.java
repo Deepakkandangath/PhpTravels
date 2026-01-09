@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AgentSignupPage extends LoginSignupAgentComponent{
 
+    private By signupLink= By.xpath("//a[@href='#signup']']");
     private By firstName= By.xpath("//input[@id='firstname']");
     private By lastName= By.xpath(" //input[@name='last_name']");
     private By country= By.xpath("//button[@title='Select Country']");
@@ -22,6 +23,10 @@ public class AgentSignupPage extends LoginSignupAgentComponent{
     public AgentSignupPage(WebDriver driver)
     {
         super(driver);
+    }
+
+    protected void clickSignupLink() {
+        click(signupLink);
     }
 
     protected void enterFirstName(String fName){
