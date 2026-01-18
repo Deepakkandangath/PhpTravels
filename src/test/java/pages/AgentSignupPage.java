@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AgentSignupPage extends LoginSignupAgentComponent{
+public class AgentSignupPage extends BasePage{
 
     private By signupLink= By.xpath("//a[@href='#signup']']");
     private By firstName= By.xpath("//input[@id='firstname']");

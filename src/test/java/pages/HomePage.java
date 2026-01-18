@@ -4,29 +4,49 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage {
 
-    public HeaderComponent header;
-    public BlogSearchComponent blogSearch;
-    public CarSearchComponent carSearch;
-    public FlightSearchComponent flightSearch;
-    public HotelSearchComponent hotelSearch;
-    public LoginSignupAgentComponent loginSignupAgent;
-    public LoginSignupCustomerComponent loginSignupCustomer;
-    public TourSearchComponent tourSearch;
-    public VisaSearchComponent visaSearch;
-
     public HomePage(WebDriver driver)
     {
         super(driver);
-        header= new HeaderComponent(driver);
-        blogSearch =new BlogSearchComponent(driver);
-        carSearch=new CarSearchComponent(driver);
-        flightSearch=new FlightSearchComponent(driver);
-        hotelSearch=new HotelSearchComponent(driver);
-        loginSignupAgent=new LoginSignupAgentComponent(driver);
-        loginSignupCustomer=new LoginSignupCustomerComponent(driver);
-        tourSearch=new TourSearchComponent(driver);
-        visaSearch=new VisaSearchComponent(driver);
     }
+
+    public HeaderComponent goToHeaderComponent() {
+        return new HeaderComponent(driver);
+    }
+
+    public BlogSearchComponent goToBlogSearchComponent() {
+        return new BlogSearchComponent(driver);
+    }
+
+    public CarSearchComponent goToCarSearchComponent() {
+        return new CarSearchComponent(driver);
+    }
+
+    public FlightSearchComponent goToFlightSearchComponent() {
+        return new FlightSearchComponent(driver);
+    }
+
+    public HotelSearchComponent goToHotelSearchComponent() {
+        return new HotelSearchComponent(driver);
+    }
+
+    public LoginSignupAgentComponent goToLoginSignupAgentComponent() {
+        return new LoginSignupAgentComponent(driver);
+    }
+
+    public LoginSignupCustomerComponent goToLoginSignupCustomerComponent() {
+        return new LoginSignupCustomerComponent(driver);
+    }
+
+    public TourSearchComponent goToTourSearchComponent() {
+        return new TourSearchComponent(driver);
+    }
+
+    public VisaSearchComponent goToVisaSearchComponent() {
+        return new VisaSearchComponent(driver);
+    }
+
+
+
 
 
 

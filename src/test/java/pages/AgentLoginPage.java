@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class AgentLoginPage extends LoginSignupAgentComponent{
+public class AgentLoginPage extends BasePage{
 
     public AgentLoginPage(WebDriver driver)
     {

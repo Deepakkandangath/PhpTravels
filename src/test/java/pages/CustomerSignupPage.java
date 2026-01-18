@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CustomerSignupPage extends LoginSignupCustomerComponent{
+public class CustomerSignupPage extends BasePage{
 
    private By firstName= By.xpath("//input[@id='firstname']");
     private By lastName= By.xpath(" //input[@name='last_name']");

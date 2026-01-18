@@ -6,10 +6,16 @@ import org.openqa.selenium.WebDriver;
 public class
 LoginSignupAgentComponent extends BasePage {
 
-   public AgentLoginPage aLoginPage;
     public LoginSignupAgentComponent(WebDriver driver) {
         super(driver);
-        aLoginPage=new AgentLoginPage(driver);
+    }
+
+    public AgentLoginPage goToLoginPage() {
+        return new AgentLoginPage(driver);
+    }
+
+    public AgentSignupPage goToSignupPage() {
+        return new AgentSignupPage(driver);
     }
 
 
