@@ -13,6 +13,7 @@ public class CustomerSignupPage extends BasePage{
     private By password= By.xpath("//input[@name='password']");
     private By iAmHuman=By.xpath("//div[@id='anchor']");
     private By signup=By.xpath("//button[@id='submitBTN']");
+    private By countrySearchInput =  By.cssSelector("input[aria-label=Search]");
     public CustomerSignupPage(WebDriver driver)
     {
         super(driver);
@@ -21,28 +22,29 @@ public class CustomerSignupPage extends BasePage{
     public void enterFirstName(String fName){
         type(firstName,fName);
     }
-    protected void enterLastName(String lName){
+    public void enterLastName(String lName){
         type(lastName,lName);
     }
-    protected void clickCountry(String selectCountry) {
+    public void selectCountry(String selectCountry) {
         click(country);
-        click(By.xpath("//a[contains(.,'"+country+"') and contains(@class,'dropdown-item')]"));
+        type(countrySearchInput,selectCountry);
+        click(By.xpath("//a[starts-with(.,' "+country+"') and contains(@class,'dropdown-item')]"));
 
     }
-    protected void enterPhone(String phoneNo){
+    public void enterPhone(String phoneNo){
         type(phone,phoneNo);
     }
-    protected void enterEmail(String email){
+    public void enterEmail(String email){
         type(emailAddress,email);
     }
-    protected void enterPassword(String passWord){
+    public void enterPassword(String passWord){
         type(password,passWord);
     }
-    protected void clickIAmHuman() {
+    public void clickIAmHuman() {
         click(iAmHuman);
     }
 
-    protected void clickSignup() {
+    public void clickSignup() {
         click(signup);
     }
 
